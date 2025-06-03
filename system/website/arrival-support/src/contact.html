@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - SmartArrival Support</title>
+    <meta name="description" content="SmartArrival Supportへのお問い合わせ">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">✈️ SmartArrival</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">サービス</a></li>
+                    <li><a href="index.html#features">特徴</a></li>
+                    <li><a href="index.html#pricing">料金</a></li>
+                    <li><a href="booking/form.html">予約</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <section class="section">
+        <div class="container">
+            <h1 class="section-title">お問い合わせ</h1>
+            <p class="text-center mb-2">ご質問やご相談がございましたら、お気軽にお問い合わせください。</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem;">
+                <!-- 連絡先情報 -->
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 2rem;">📞 連絡先情報</h3>
+                    
+                    <div class="service-card" style="text-align: left;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="color: #333; margin-bottom: 0.5rem;">📧 メールアドレス</h4>
+                            <p style="color: #667eea; font-weight: bold;">info@smartarrival-support.com</p>
+                            <small style="color: #666;">24時間以内に返信いたします</small>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="color: #333; margin-bottom: 0.5rem;">📱 LINE公式アカウント</h4>
+                            <p style="color: #667eea; font-weight: bold;">@smartarrival</p>
+                            <small style="color: #666;">リアルタイムでのやり取りが可能です</small>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="color: #333; margin-bottom: 0.5rem;">📞 緊急連絡先</h4>
+                            <p style="color: #667eea; font-weight: bold;">+66-XX-XXX-XXXX</p>
+                            <small style="color: #666;">当日の緊急時のみ（24時間対応）</small>
+                        </div>
+
+                        <div>
+                            <h4 style="color: #333; margin-bottom: 0.5rem;">🕒 営業時間</h4>
+                            <p style="color: #333;">
+                                平日: 9:00 - 18:00 (JST)<br>
+                                土日祝: 10:00 - 17:00 (JST)
+                            </p>
+                            <small style="color: #666;">※ 空港サポートは24時間対応</small>
+                        </div>
+                    </div>
+
+                    <!-- よくある質問へのリンク -->
+                    <div style="margin-top: 2rem;">
+                        <h4 style="color: #667eea; margin-bottom: 1rem;">💡 まずはこちらをご確認ください</h4>
+                        <a href="faq.html" class="service-button" style="display: inline-block;">よくある質問を見る</a>
+                    </div>
+                </div>
+
+                <!-- お問い合わせフォーム -->
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 2rem;">✉️ お問い合わせフォーム</h3>
+                    
+                    <div class="form-container">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="inquiry-type">お問い合わせ種別 *</label>
+                                <select id="inquiry-type" name="inquiry-type" required>
+                                    <option value="">選択してください</option>
+                                    <option value="service">サービス内容について</option>
+                                    <option value="booking">予約について</option>
+                                    <option value="pricing">料金について</option>
+                                    <option value="support">技術的なサポート</option>
+                                    <option value="other">その他</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">お名前 *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">メールアドレス *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">電話番号</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">件名 *</label>
+                                <input type="text" id="subject" name="subject" placeholder="お問い合わせの件名をご記入ください" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">お問い合わせ内容 *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="詳細なお問い合わせ内容をご記入ください" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label style="display: flex; align-items: flex-start; font-weight: normal;">
+                                    <input type="checkbox" id="privacy-agreement" name="privacy-agreement" style="margin-right: 0.5rem; margin-top: 0.2rem;" required>
+                                    <span>
+                                        <a href="privacy.html" target="_blank" style="color: #667eea;">プライバシーポリシー</a>に同意します *
+                                    </span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="submit-button">送信する</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 追加情報 -->
+            <div style="margin-top: 4rem;">
+                <h3 class="section-title">その他のサポート</h3>
+                
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">📚</div>
+                        <h4>事前準備ガイド</h4>
+                        <p>タイ旅行前に知っておきたい情報をまとめたガイドをメールでお送りします。</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">🎯</div>
+                        <h4>カスタムプラン相談</h4>
+                        <p>標準プラン以外のご要望についても、お気軽にご相談ください。</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">🤝</div>
+                        <h4>法人・団体向けサービス</h4>
+                        <p>企業研修や団体旅行向けの特別プランもご用意しております。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SmartArrival Support. All rights reserved.</p>
+            <p>
+                <a href="privacy.html" style="color: #ccc; margin: 0 1rem;">プライバシーポリシー</a>
+                <a href="contact.html" style="color: #ccc; margin: 0 1rem;">お問い合わせ</a>
+                <a href="about.html" style="color: #ccc; margin: 0 1rem;">会社概要</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // お問い合わせフォーム送信処理
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // フォームデータを収集
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // ローディング表示
+            showLoading();
+            
+            // 送信処理をシミュレート
+            setTimeout(() => {
+                hideLoading();
+                
+                // 成功メッセージを表示
+                const modal = document.createElement('div');
+                modal.className = 'modal';
+                modal.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 2000;
+                `;
+
+                const modalContent = document.createElement('div');
+                modalContent.style.cssText = `
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    max-width: 400px;
+                    width: 90%;
+                    text-align: center;
+                `;
+
+                modalContent.innerHTML = `
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+                    <h3>送信完了</h3>
+                    <p style="margin: 1rem 0;">お問い合わせありがとうございます。<br>24時間以内にご返信いたします。</p>
+                    <button onclick="this.closest('.modal').remove(); document.getElementById('contact-form').reset();" style="
+                        background: #667eea;
+                        color: white;
+                        padding: 0.8rem 1.5rem;
+                        border: none;
+                        border-radius: 25px;
+                        cursor: pointer;
+                    ">閉じる</button>
+                `;
+
+                modal.appendChild(modalContent);
+                document.body.appendChild(modal);
+
+                // モーダル外クリックで閉じる
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.remove();
+                        document.getElementById('contact-form').reset();
+                    }
+                });
+            }, 2000);
+        });
+
+        // レスポンシブ対応
+        function adjustLayout() {
+            const container = document.querySelector('div[style*="grid-template-columns: 1fr 1fr"]');
+            if (window.innerWidth <= 768 && container) {
+                container.style.gridTemplateColumns = '1fr';
+                container.style.gap = '2rem';
+            } else if (container) {
+                container.style.gridTemplateColumns = '1fr 1fr';
+                container.style.gap = '3rem';
+            }
+        }
+
+        window.addEventListener('resize', adjustLayout);
+        document.addEventListener('DOMContentLoaded', adjustLayout);
+    </script>
+</body>
+</html> 

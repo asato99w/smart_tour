@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予約フォーム - SmartArrival Support</title>
+    <meta name="description" content="バンコク空港到着サポートサービスの予約フォーム">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">✈️ SmartArrival</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#services">サービス</a></li>
+                    <li><a href="../index.html#features">特徴</a></li>
+                    <li><a href="../index.html#pricing">料金</a></li>
+                    <li><a href="form.html">予約</a></li>
+                    <li><a href="../contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <section class="section">
+        <div class="container">
+            <h1 class="section-title">予約フォーム</h1>
+            <p class="text-center mb-2">以下のフォームに必要事項をご記入ください。確認後、24時間以内にご連絡いたします。</p>
+            
+            <div class="form-container">
+                <form id="booking-form" action="confirmation.html" method="POST">
+                    <!-- サービス選択 -->
+                    <div class="form-group">
+                        <label for="service">ご希望のサービス *</label>
+                        <select id="service" name="service" required>
+                            <option value="">選択してください</option>
+                            <option value="basic">ベーシックプラン（1,500 THB）</option>
+                            <option value="advanced">アドバンスドプラン（2,000 THB）</option>
+                            <option value="full">フルサポートプラン（3,000 THB）</option>
+                            <option value="custom">カスタムオプション（要相談）</option>
+                        </select>
+                    </div>
+
+                    <!-- 料金表示 -->
+                    <div class="form-group">
+                        <div style="background: #f0f8ff; padding: 1rem; border-radius: 8px; text-align: center;">
+                            <strong>選択プラン料金: <span id="price-display">未選択</span></strong>
+                        </div>
+                    </div>
+
+                    <!-- 到着情報 -->
+                    <h3 style="margin: 2rem 0 1rem; color: #667eea;">到着情報</h3>
+                    
+                    <div class="form-group">
+                        <label for="airport">到着空港 *</label>
+                        <select id="airport" name="airport" required>
+                            <option value="">選択してください</option>
+                            <option value="bkk">スワンナプーム空港（BKK）</option>
+                            <option value="dmk">ドンムアン空港（DMK）</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="arrival-date">到着日 *</label>
+                        <input type="date" id="arrival-date" name="arrival-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="arrival-time">到着時刻 *</label>
+                        <input type="time" id="arrival-time" name="arrival-time" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="flight-number">便名 *</label>
+                        <input type="text" id="flight-number" name="flight-number" placeholder="例: TG661" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="airline">航空会社</label>
+                        <input type="text" id="airline" name="airline" placeholder="例: タイ国際航空">
+                    </div>
+
+                    <!-- お客様情報 -->
+                    <h3 style="margin: 2rem 0 1rem; color: #667eea;">お客様情報</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">お名前 *</label>
+                        <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name-english">お名前（英語表記） *</label>
+                        <input type="text" id="name-english" name="name-english" placeholder="YAMADA TARO" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">メールアドレス *</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">電話番号 *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="090-1234-5678" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="travelers">旅行者数 *</label>
+                        <select id="travelers" name="travelers" required>
+                            <option value="">選択してください</option>
+                            <option value="1">1名</option>
+                            <option value="2">2名</option>
+                            <option value="3">3名</option>
+                            <option value="4">4名</option>
+                            <option value="5+">5名以上</option>
+                        </select>
+                    </div>
+
+                    <!-- 宿泊先情報 -->
+                    <h3 style="margin: 2rem 0 1rem; color: #667eea;">宿泊先情報</h3>
+                    
+                    <div class="form-group">
+                        <label for="hotel-name">ホテル名</label>
+                        <input type="text" id="hotel-name" name="hotel-name" placeholder="例: バンコク マリオット ホテル スクンビット">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hotel-address">ホテル住所</label>
+                        <textarea id="hotel-address" name="hotel-address" rows="3" placeholder="ホテルの住所をご記入ください"></textarea>
+                    </div>
+
+                    <!-- 特別要望 -->
+                    <h3 style="margin: 2rem 0 1rem; color: #667eea;">特別要望・その他</h3>
+                    
+                    <div class="form-group">
+                        <label for="special-requests">特別要望・ご質問</label>
+                        <textarea id="special-requests" name="special-requests" rows="4" placeholder="特別なご要望やご質問がございましたらご記入ください"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="line-id">LINE ID（任意）</label>
+                        <input type="text" id="line-id" name="line-id" placeholder="LINE IDをお持ちの場合はご記入ください">
+                        <small style="color: #666; font-size: 0.9rem;">※ LINEでのやり取りをご希望の場合</small>
+                    </div>
+
+                    <!-- 支払い方法 -->
+                    <h3 style="margin: 2rem 0 1rem; color: #667eea;">お支払い方法</h3>
+                    
+                    <div class="form-group">
+                        <label>お支払い方法 *</label>
+                        <div style="margin-top: 0.5rem;">
+                            <label style="display: flex; align-items: center; margin-bottom: 0.5rem; font-weight: normal;">
+                                <input type="radio" name="payment-method" value="advance" style="margin-right: 0.5rem;" required>
+                                事前クレジットカード決済
+                            </label>
+                            <label style="display: flex; align-items: center; font-weight: normal;">
+                                <input type="radio" name="payment-method" value="cash" style="margin-right: 0.5rem;" required>
+                                当日現金払い
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 同意事項 -->
+                    <div class="form-group">
+                        <label style="display: flex; align-items: flex-start; font-weight: normal;">
+                            <input type="checkbox" id="agreement" name="agreement" style="margin-right: 0.5rem; margin-top: 0.2rem;" required>
+                            <span>
+                                <a href="../privacy.html" target="_blank" style="color: #667eea;">プライバシーポリシー</a>および利用規約に同意します *
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- 送信ボタン -->
+                    <button type="submit" class="submit-button">予約を申し込む</button>
+                </form>
+            </div>
+
+            <!-- 注意事項 -->
+            <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
+                <h4 style="color: #856404; margin-bottom: 1rem;">📋 ご予約前にご確認ください</h4>
+                <ul style="color: #856404; margin-left: 1.5rem;">
+                    <li>予約確定は、弊社からの確認メール送信後となります</li>
+                    <li>前日までのキャンセルは無料、当日キャンセルは50%のキャンセル料が発生します</li>
+                    <li>フライトの遅延・欠航の場合は、追加料金なしで対応いたします</li>
+                    <li>ご不明な点がございましたら、お気軽にお問い合わせください</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SmartArrival Support. All rights reserved.</p>
+            <p>
+                <a href="../privacy.html" style="color: #ccc; margin: 0 1rem;">プライバシーポリシー</a>
+                <a href="../contact.html" style="color: #ccc; margin: 0 1rem;">お問い合わせ</a>
+                <a href="../about.html" style="color: #ccc; margin: 0 1rem;">会社概要</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // URLパラメータからプランを取得して自動選択
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const plan = urlParams.get('plan');
+            if (plan) {
+                const serviceSelect = document.getElementById('service');
+                serviceSelect.value = plan;
+                updatePrice(plan);
+            }
+        });
+
+        // フォーム送信時の処理
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // フォームデータを収集
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // ローディング表示
+            showLoading();
+            
+            // 実際の送信処理をシミュレート
+            setTimeout(() => {
+                hideLoading();
+                // 確認ページへリダイレクト
+                window.location.href = 'confirmation.html?status=success';
+            }, 2000);
+        });
+    </script>
+</body>
+</html> 

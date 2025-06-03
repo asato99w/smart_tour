@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よくある質問（FAQ） | SmartArrival Support</title>
+    <meta name="description" content="SmartArrival Supportのよくある質問と回答">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">✈️ SmartArrival</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">サービス</a></li>
+                    <li><a href="index.html#features">特徴</a></li>
+                    <li><a href="index.html#pricing">料金</a></li>
+                    <li><a href="booking/form.html">予約</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <section class="section">
+        <div class="container">
+            <h1 class="section-title">❓ よくある質問（FAQ）</h1>
+            <p class="text-center mb-2">お客様からよくいただくご質問にお答えします</p>
+
+            <!-- 検索ボックス -->
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <input type="text" id="faqSearch" placeholder="質問を検索..." 
+                       style="width: 100%; max-width: 500px; padding: 1rem; border: 2px solid #ddd; border-radius: 25px; font-size: 1rem;">
+            </div>
+
+            <!-- カテゴリータブ -->
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <div class="tab-buttons" style="display: inline-flex; background: #f8f9fa; border-radius: 25px; padding: 0.5rem;">
+                    <button class="tab-btn active" data-category="all">すべて</button>
+                    <button class="tab-btn" data-category="service">サービス</button>
+                    <button class="tab-btn" data-category="booking">予約・料金</button>
+                    <button class="tab-btn" data-category="support">サポート</button>
+                    <button class="tab-btn" data-category="other">その他</button>
+                </div>
+            </div>
+
+            <!-- FAQ項目 -->
+            <div class="faq-container">
+                
+                <!-- サービスに関する質問 -->
+                <div class="faq-item" data-category="service">
+                    <div class="faq-question">
+                        <h3>🛫 どの空港で利用できますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>現在、スワンナプーム国際空港（BKK）とドンムアン国際空港（DMK）でサービスを提供しています。その他の空港についてもお気軽にお問い合わせください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="service">
+                    <div class="faq-question">
+                        <h3>⏰ 深夜・早朝便でも対応可能ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、24時間対応しています。深夜便や早朝便でも追加料金なしでサポートいたします。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="service">
+                    <div class="faq-question">
+                        <h3>📱 どのようなアプリをインストールしてもらえますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Grab（配車アプリ）、LINE、Google翻訳、Google Maps、通貨換算アプリなど、タイ滞在に必要なアプリをインストール・設定いたします。その他ご希望のアプリがあればお申し付けください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="service">
+                    <div class="faq-question">
+                        <h3>💳 SIMカードの種類は選べますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、滞在期間やデータ使用量に応じて最適なSIMカードをご提案します。主要キャリア（AIS、dtac、True）から選択可能です。</p>
+                    </div>
+                </div>
+
+                <!-- 予約・料金に関する質問 -->
+                <div class="faq-item" data-category="booking">
+                    <div class="faq-question">
+                        <h3>💰 料金の支払い方法は？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>現金（タイバーツ・日本円）、クレジットカード、PayPay、LINE Payでお支払いいただけます。事前決済も可能です。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="booking">
+                    <div class="faq-question">
+                        <h3>📅 いつまでに予約すれば良いですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>できるだけ早めのご予約をお勧めしますが、最低でも到着の24時間前までにご予約ください。緊急の場合はお電話でご相談ください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="booking">
+                    <div class="faq-question">
+                        <h3>🔄 キャンセル・変更は可能ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>到着の24時間前までは無料でキャンセル・変更が可能です。24時間以内の場合は50%のキャンセル料が発生します。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="booking">
+                    <div class="faq-question">
+                        <h3>👥 複数人での利用は可能ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、グループでのご利用も可能です。3名様以上の場合は割引料金を適用いたします。詳細はお問い合わせください。</p>
+                    </div>
+                </div>
+
+                <!-- サポートに関する質問 -->
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>🗣️ 日本語でサポートしてもらえますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、すべてのスタッフが日本語対応可能です。タイ語や英語が分からなくても安心してご利用いただけます。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>📞 サービス後のサポートはありますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、滞在中に困ったことがあれば24時間LINEでサポートいたします。追加料金はかかりません。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>🏥 緊急時の対応はしてもらえますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>病気やケガなどの緊急時には、病院への同行や通訳サポートを行います（別途料金）。まずはLINEまたはお電話でご連絡ください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>🛍️ ショッピングや観光の案内もしてもらえますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>フルサポートプランでは周辺の観光地やショッピングエリアの案内も含まれています。その他のプランでも別途ガイドサービスを提供可能です。</p>
+                    </div>
+                </div>
+
+                <!-- その他の質問 -->
+                <div class="faq-item" data-category="other">
+                    <div class="faq-question">
+                        <h3>🎒 荷物の預かりサービスはありますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>申し訳ございませんが、荷物の預かりサービスは行っておりません。空港内のロッカーサービスや宿泊先での荷物預かりをご案内いたします。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="other">
+                    <div class="faq-question">
+                        <h3>🚗 レンタカーの手配はできますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>レンタカー会社のご紹介は可能ですが、直接の手配は行っておりません。国際運転免許証の確認や注意事項についてもご案内いたします。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="other">
+                    <div class="faq-question">
+                        <h3>🏪 両替はどこでするのがお得ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>空港内の両替所よりも市内の両替所の方がレートが良い場合が多いです。お客様のご希望に応じて最適な両替所をご案内いたします。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="other">
+                    <div class="faq-question">
+                        <h3>🌡️ タイの気候について教えてください</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>タイは年間を通して暑く、3月〜5月が最も暑い時期です。6月〜10月は雨季、11月〜2月は乾季で比較的過ごしやすくなります。服装や持ち物についてもアドバイスいたします。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="other">
+                    <div class="faq-question">
+                        <h3>💉 ワクチン接種は必要ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>現在、タイ入国に必要なワクチン接種はありません。ただし、最新の入国要件については外務省や大使館の情報をご確認ください。</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- お問い合わせCTA -->
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 10px;">
+                <h3 style="color: #667eea; margin-bottom: 1rem;">他にご質問がございますか？</h3>
+                <p style="margin-bottom: 2rem;">お気軽にお問い合わせください。24時間以内にご回答いたします。</p>
+                <a href="contact.html" class="cta-button">お問い合わせする</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SmartArrival Support. All rights reserved.</p>
+            <p>
+                <a href="privacy.html" style="color: #ccc; margin: 0 1rem;">プライバシーポリシー</a>
+                <a href="contact.html" style="color: #ccc; margin: 0 1rem;">お問い合わせ</a>
+                <a href="about.html" style="color: #ccc; margin: 0 1rem;">会社概要</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // FAQ検索機能
+        document.getElementById('faqSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // カテゴリーフィルター
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // アクティブボタンの切り替え
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                const faqItems = document.querySelectorAll('.faq-item');
+                
+                faqItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // 検索ボックスをクリア
+                document.getElementById('faqSearch').value = '';
+            });
+        });
+
+        // FAQ開閉機能
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const toggle = this.querySelector('.faq-toggle');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    toggle.textContent = '+';
+                    faqItem.classList.remove('active');
+                } else {
+                    answer.style.display = 'block';
+                    toggle.textContent = '-';
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .faq-item.active {
+            border-color: #667eea;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            background: white;
+            display: none;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .tab-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background: transparent;
+            color: #666;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .tab-btn:hover {
+            background: #e9ecef;
+        }
+
+        .tab-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .faq-question {
+                padding: 1rem;
+            }
+
+            .faq-answer {
+                padding: 1rem;
+            }
+
+            .faq-question h3 {
+                font-size: 1rem;
+            }
+
+            .tab-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</body>
+</html> 
