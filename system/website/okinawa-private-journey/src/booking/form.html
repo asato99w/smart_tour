@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Tour - Okinawa Private Journey</title>
+    <meta name="description" content="Book your personalized Okinawa tour experience. Easy online booking for small group tours.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌺</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">🌺 Okinawa Private Journey</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#tours">Tours</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#pricing">Pricing</a></li>
+                    <li><a href="form.html">Book Now</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="section" style="margin-top: 80px;">
+        <div class="container">
+            <div style="margin-bottom: 2rem;">
+                <a href="../index.html" style="color: #4a9eff; text-decoration: none;">← Back to Tours</a>
+            </div>
+            
+            <div class="form-container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h1 style="font-size: 2.5rem; color: #2d3748; margin-bottom: 1rem;">Book Your Okinawa Experience</h1>
+                    <p style="font-size: 1.1rem; color: #718096;">Let's create your perfect personalized tour</p>
+                </div>
+
+                <!-- Tour Selection -->
+                <div style="background: #f0f8ff; padding: 2rem; border-radius: 15px; margin-bottom: 3rem;">
+                    <h3 style="color: #4a9eff; margin-bottom: 1.5rem; text-align: center;">✨ Select Your Tour</h3>
+                    
+                    <div style="display: grid; gap: 1rem;">
+                        <label style="display: flex; align-items: center; padding: 1rem; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='#4a9eff'" onmouseout="this.style.borderColor='#e2e8f0'">
+                            <input type="radio" name="tour" value="serene" style="margin-right: 1rem;" onchange="updateTourDetails('serene')">
+                            <div style="flex-grow: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <h4>🌸 Serene Okinawa</h4>
+                                        <p style="color: #718096; margin: 0.5rem 0;">Solo Female Travelers • 6 hours</p>
+                                    </div>
+                                    <div style="color: #4a9eff; font-weight: bold;">¥18,000 - ¥22,000</div>
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; padding: 1rem; border: 2px solid #4a9eff; border-radius: 10px; cursor: pointer; background: #f0f8ff;">
+                            <input type="radio" name="tour" value="island-style" checked style="margin-right: 1rem;" onchange="updateTourDetails('island-style')">
+                            <div style="flex-grow: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <h4>👭 Island Style with Friends <span style="background: #4a9eff; color: white; padding: 0.2rem 0.5rem; border-radius: 5px; font-size: 0.8rem;">Popular</span></h4>
+                                        <p style="color: #718096; margin: 0.5rem 0;">2-4 Female Friends • 6 hours</p>
+                                    </div>
+                                    <div style="color: #4a9eff; font-weight: bold;">¥14,000 / person</div>
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; padding: 1rem; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='#4a9eff'" onmouseout="this.style.borderColor='#e2e8f0'">
+                            <input type="radio" name="tour" value="heritage" style="margin-right: 1rem;" onchange="updateTourDetails('heritage')">
+                            <div style="flex-grow: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <h4>🏛️ Heritage Voyage</h4>
+                                        <p style="color: #718096; margin: 0.5rem 0;">Senior Travelers • 5.5 hours</p>
+                                    </div>
+                                    <div style="color: #4a9eff; font-weight: bold;">¥20,000 - ¥25,000</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <form id="bookingForm" style="display: grid; gap: 2rem;">
+                    <!-- Personal Information -->
+                    <div>
+                        <h3 style="color: #4a9eff; margin-bottom: 1.5rem;">👤 Personal Information</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">First Name *</label>
+                                <input type="text" required style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Last Name *</label>
+                                <input type="text" required style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email *</label>
+                                <input type="email" required style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Phone Number</label>
+                                <input type="tel" style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Details -->
+                    <div>
+                        <h3 style="color: #4a9eff; margin-bottom: 1.5rem;">📅 Tour Details</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Preferred Date *</label>
+                                <input type="date" required style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Number of Travelers *</label>
+                                <select required style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                                    <option value="">Select</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Preferred Start Time</label>
+                                <select style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                                    <option value="9:00">9:00 AM</option>
+                                    <option value="10:00" selected>10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Hotel or Meeting Location *</label>
+                            <input type="text" required placeholder="Hotel name or preferred meeting point in Naha" style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                    </div>
+
+                    <!-- Special Requests -->
+                    <div>
+                        <h3 style="color: #4a9eff; margin-bottom: 1.5rem;">💭 Special Requests & Preferences</h3>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Dietary Restrictions or Allergies</label>
+                            <input type="text" placeholder="Please specify any dietary needs or allergies" style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Special Interests or Requests</label>
+                            <textarea placeholder="Tell us about your interests, photography preferences, or any special occasions we should know about" style="width: 100%; height: 100px; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">How did you hear about us?</label>
+                            <select style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+                                <option value="">Please select</option>
+                                <option value="google">Google Search</option>
+                                <option value="social">Social Media</option>
+                                <option value="friend">Friend/Family Recommendation</option>
+                                <option value="travel-blog">Travel Blog/Website</option>
+                                <option value="hotel">Hotel Recommendation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Optional Add-ons -->
+                    <div id="addons-section">
+                        <h3 style="color: #4a9eff; margin-bottom: 1.5rem;">➕ Optional Add-ons</h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <label style="display: flex; align-items: center; padding: 1rem; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer;">
+                                <input type="checkbox" name="addons" value="photoshoot" style="margin-right: 1rem;">
+                                <div style="flex-grow: 1;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                                        <div>
+                                            <h4>📸 Professional Photoshoot</h4>
+                                            <p style="color: #718096; margin: 0.5rem 0; font-size: 0.9rem;">Extended 30-minute professional photography session</p>
+                                        </div>
+                                        <div style="color: #4a9eff; font-weight: bold;">+¥5,000</div>
+                                    </div>
+                                </div>
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; padding: 1rem; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer;">
+                                <input type="checkbox" name="addons" value="lunch" style="margin-right: 1rem;">
+                                <div style="flex-grow: 1;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                                        <div>
+                                            <h4>🍜 Traditional Lunch</h4>
+                                            <p style="color: #718096; margin: 0.5rem 0; font-size: 0.9rem;">Authentic Okinawan cuisine at local restaurant</p>
+                                        </div>
+                                        <div style="color: #4a9eff; font-weight: bold;">+¥3,000</div>
+                                    </div>
+                                </div>
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; padding: 1rem; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer;">
+                                <input type="checkbox" name="addons" value="shopping" style="margin-right: 1rem;">
+                                <div style="flex-grow: 1;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                                        <div>
+                                            <h4>🛍️ Shopping Assistance</h4>
+                                            <p style="color: #718096; margin: 0.5rem 0; font-size: 0.9rem;">Personal shopping guide for souvenirs and local products</p>
+                                        </div>
+                                        <div style="color: #4a9eff; font-weight: bold;">+¥2,000</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Price Summary -->
+                    <div id="price-summary" style="background: #f0f8ff; padding: 2rem; border-radius: 15px;">
+                        <h3 style="color: #4a9eff; margin-bottom: 1.5rem; text-align: center;">💰 Price Summary</h3>
+                        <div style="display: grid; gap: 0.5rem; margin-bottom: 1rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Base Tour Price:</span>
+                                <span id="base-price">¥14,000 per person</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Add-ons:</span>
+                                <span id="addons-price">¥0</span>
+                            </div>
+                            <hr style="margin: 1rem 0;">
+                            <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.2rem;">
+                                <span>Estimated Total:</span>
+                                <span id="total-price">¥14,000 per person</span>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #718096; text-align: center;">*Final price will be confirmed after reviewing your requirements</p>
+                    </div>
+
+                    <!-- Terms and Submit -->
+                    <div>
+                        <label style="display: flex; align-items: center; margin-bottom: 2rem; cursor: pointer;">
+                            <input type="checkbox" required style="margin-right: 1rem;">
+                            <span>I agree to the <a href="../privacy.html" style="color: #4a9eff;">Terms & Conditions</a> and <a href="../privacy.html" style="color: #4a9eff;">Privacy Policy</a> *</span>
+                        </label>
+                        
+                        <div style="text-align: center;">
+                            <button type="submit" style="background: linear-gradient(135deg, #ff6b9d, #4a9eff); color: white; padding: 1rem 3rem; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 15px rgba(74, 158, 255, 0.3); transition: all 0.3s;">
+                                🌺 Submit Booking Request
+                            </button>
+                            <p style="margin-top: 1rem; color: #718096; font-size: 0.9rem;">We'll contact you within 24 hours to confirm your booking</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Okinawa Private Journey. All rights reserved.</p>
+            <p>
+                <a href="../privacy.html" style="color: #ccc; margin: 0 1rem;">Privacy Policy</a>
+                <a href="../contact.html" style="color: #ccc; margin: 0 1rem;">Contact</a>
+                <a href="../about.html" style="color: #ccc; margin: 0 1rem;">About Us</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Update tour details based on selection
+        function updateTourDetails(tour) {
+            const basePrice = document.getElementById('base-price');
+            const totalPrice = document.getElementById('total-price');
+            
+            switch(tour) {
+                case 'serene':
+                    basePrice.textContent = '¥18,000 - ¥22,000';
+                    totalPrice.textContent = '¥18,000 - ¥22,000';
+                    break;
+                case 'island-style':
+                    basePrice.textContent = '¥14,000 per person';
+                    totalPrice.textContent = '¥14,000 per person';
+                    break;
+                case 'heritage':
+                    basePrice.textContent = '¥20,000 - ¥25,000';
+                    totalPrice.textContent = '¥20,000 - ¥25,000';
+                    break;
+            }
+            updatePriceCalculation();
+        }
+
+        // Update price calculation for add-ons
+        function updatePriceCalculation() {
+            const checkboxes = document.querySelectorAll('input[name="addons"]:checked');
+            let addonsTotal = 0;
+            
+            checkboxes.forEach(checkbox => {
+                switch(checkbox.value) {
+                    case 'photoshoot':
+                        addonsTotal += 5000;
+                        break;
+                    case 'lunch':
+                        addonsTotal += 3000;
+                        break;
+                    case 'shopping':
+                        addonsTotal += 2000;
+                        break;
+                }
+            });
+            
+            document.getElementById('addons-price').textContent = addonsTotal > 0 ? `¥${addonsTotal.toLocaleString()}` : '¥0';
+        }
+
+        // Add event listeners for add-on checkboxes
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('input[name="addons"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updatePriceCalculation);
+            });
+            
+            // Set minimum date to today
+            const dateInput = document.querySelector('input[type="date"]');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        });
+
+        // Handle form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your booking request! We will contact you within 24 hours to confirm your tour details and finalize your reservation.');
+        });
+    </script>
+</body>
+</html> 
