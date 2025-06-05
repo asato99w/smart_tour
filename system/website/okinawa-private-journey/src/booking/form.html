@@ -68,19 +68,6 @@
                                 </div>
                             </div>
                         </label>
-                        
-                        <label style="display: flex; align-items: center; padding: 1rem; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='#4a9eff'" onmouseout="this.style.borderColor='#e2e8f0'">
-                            <input type="radio" name="tour" value="heritage" style="margin-right: 1rem;" onchange="updateTourDetails('heritage')">
-                            <div style="flex-grow: 1;">
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <div>
-                                        <h4>🏛️ Heritage Voyage</h4>
-                                        <p style="color: #718096; margin: 0.5rem 0;">Senior Travelers • 5.5 hours</p>
-                                    </div>
-                                    <div style="color: #4a9eff; font-weight: bold;">¥20,000 - ¥25,000</div>
-                                </div>
-                            </div>
-                        </label>
                     </div>
                 </div>
 
@@ -280,10 +267,6 @@
                 case 'island-style':
                     basePrice.textContent = '¥14,000 per person';
                     totalPrice.textContent = '¥14,000 per person';
-                    break;
-                case 'heritage':
-                    basePrice.textContent = '¥20,000 - ¥25,000';
-                    totalPrice.textContent = '¥20,000 - ¥25,000';
                     break;
             }
             updatePriceCalculation();
