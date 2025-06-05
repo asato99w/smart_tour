@@ -147,9 +147,9 @@ function updatePrice(serviceType) {
     if (!priceDisplay) return;
 
     const prices = {
-        'basic': '1,500 THB',
-        'advanced': '2,000 THB',
-        'full': '3,000 THB',
+        'basic': '7,500円',
+        'advanced': '10,000円',
+        'full': '15,000円',
         'custom': '要相談'
     };
 
